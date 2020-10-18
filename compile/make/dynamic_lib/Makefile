@@ -12,13 +12,13 @@ all: libfoo.so app
 .PHONY: all clean
 
 app: main.c
-	$(CC) -o $@ $^ -I include  -L . -lfoo -Wl,-rpath=.
+	$(CC) -o $@ $^ -I include  -L . -lfoo -Wl,-rpath=. -g
 
 libfoo.so: $(objs)
 	$(CC) -shared -o $@ $^
 
 src/%.o: src/%.c
-	$(CC) -c $< -o $@ -fpic -I include
+	$(CC) -c $< -o $@ -fpic -I include -g
 
 clean:
 	rm -f app libfoo.so
