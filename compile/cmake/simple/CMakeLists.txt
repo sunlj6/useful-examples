@@ -9,4 +9,4 @@ message(STATUS "PROJECT_BINARY_DIR=${PROJECT_BINARY_DIR}")
 message(STATUS "demo_SOURCE_DIR=${demo_SOURCE_DIR}")
 message(STATUS "demo_BINARY_DIR=${demo_BINARY_DIR}")
 
-add_executable(demo1 demo1.c)
+add_executable(demo main.c)
